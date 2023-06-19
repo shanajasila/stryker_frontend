@@ -1,0 +1,46 @@
+<header class="border">
+
+    <div class="logo">
+        <img src="assets\Stryker.PNG" alt="Logo">
+    </div>
+
+    <div class="search-bar">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    </div>
+
+    <select formControlName="website" class="btn align-right" style="border-color: black;font-size: small;height: 30px;width:75px;">
+        <option selected style="background-color: rgb(255, 255, 255)">
+            Create
+        </option>
+        <option  style="background-color: rgb(255, 255, 255)">
+           New Ticket
+        </option>
+        <option style="background-color: rgb(255, 255, 255)">
+            Invoice
+        </option>
+        <option style="background-color: rgb(255, 255, 255)">
+            Payment
+        </option>
+    </select>
+    <div class="bell" style="padding-left: 7px;">
+        <img src="assets\bell.svg" alt="Profile Picture" class="bell">
+    </div>
+
+    <div class="profile"style="padding-left: 7px;">
+        <img src="assets\avatar.png" alt="Profile Picture" class="profile-picture">
+    </div>
+
+    <div class="admin-dropdown">
+        <button class="dropdown-btn">Admin<i class="fas fa-caret-down"></i></button>
+    </div>
+
+    <div class="settings-icon">
+        <i class="fas fa-cog"></i>
+    </div>
+</header>
+<nav class="side-nav border">
+    <a routerLink="#"><i class="fas fa-qrcode"></i></a>
+</nav>
+<div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="width: 469px;margin-left: 15px;">
+    <app-ticket-card></app-ticket-card>
+</div>

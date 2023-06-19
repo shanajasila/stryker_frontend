@@ -1,0 +1,137 @@
+<div class="row" style="margin-left:40px;background-color:white">
+    <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 " style="width:440px">
+
+        <!-- THIS IS ALERT SECTION... -->
+        <div>
+            <img src="assets/list.svg" alt="" height="20px" width="20px" alt=""
+                style="margin-top: 2px 2px padding-top=20px">
+
+            <b>Alerts</b>
+        </div>
+
+        <div class="flex" style="margin-top: 10px;">
+            <input type="text" placeholder="Search" class="form-control" style="margin-left: 8px; width: 1000px;" />
+            <img src="assets/search.svg" style="margin-left: -30px; margin-top: 10px; height: 17px"
+                class="fa fa-lock form-control-feedback" />
+            <button type="button" class="btn btn-warning searchbtn" style="margin-left: 25px;"><i
+                    class="fa fa-filter fa-flip-horizontal" style="color: #ffffff;"></i></button>
+        </div>
+
+        <div class="search-bar align-center">
+        </div>
+
+        <div class="filter" style="margin-top: 10px;padding-bottom:5px; ">
+            <div class="row">
+                <div class="col position-relative mt-1"
+                    style="color:rgb(225, 166, 26) ; font-size: medium; margin-left: 10; font-weight: 480;">All Request
+                    <span class="position-absolute translate-middle badge rounded-pill bg-primary"
+                        style="margin-left: 18px; margin-top: 10px;"> 15
+                    </span>
+                </div>
+                <hr class="hrline">
+                <div class="col  mt-1 text-secondary"
+                    style="margin-right: 190px; margin-left: 90px; margin-top: 0px; font-size: medium;font-weight: 480;">
+                    DemoRequest
+                    <span class="position-absolute translate-middle badge rounded-pill bg-primary"
+                        style="margin-left: 18px; margin-top: 10px;"> 9
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- </div> -->
+        <div class="filter" style="margin-top: 0px;width: 435px;">
+            <div class="row">
+                <div class="col"
+                    style="margin-left: 5px;margin-top: 5px; font-size:small;font-weight: bold; margin-bottom: 15px;">
+                    Filter
+                </div>
+                <div class="col">
+                    <!-- All type -->
+                    <select aria-placeholder="Select" style="font-size: small;" class="btn btn-sm dropdown-toggle">
+                        <option disabled="disabled" selected="selected" style="display:none;">All Type</option>
+                        <option value="">Order</option>
+                        <option value="">Return</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <!-- Status -->
+                    <select aria-placeholder="Select" style="font-size: small;" class="btn btn-sm dropdown-toggle">
+                        <option disabled="disabled" selected="selected" style="display:none;">Status</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <!-- Last 5 Days -->
+                    <select aria-placeholder="Select" style="font-size: small;" class="btn btn-sm dropdown-toggle">
+                        <option disabled="disabled" selected="selected" style="display:none;">Last 5 days</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- View All TIcket Cards -->
+
+<div class="row" style="margin-left:34px;background-color:white ">
+    <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+        <div>
+            <div class="card" style="margin-right: -50px;" *ngFor="let i of surgerydetails">
+
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <button type="button" class="btn btn-sm btn-primary ">New</button>
+                        <button type="button" (click)="TicketIdClick(i.ticket_id)" class="btn  b1">Ticket
+                            Id:{{i.ticket_id}}</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary b2">Order</button>
+
+
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle " type="button" style="margin-left: 10px;"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="priority-icon"><svg xmlns="http://www.w3.org/2000/svg" width="10"
+                                        height="10" [attr.fill]="priorityColor[i.priority]" class="bi bi-square-fill"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z" />
+                                    </svg></span>
+                                {{ i.priority }}
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body" style="padding-top: 0;">
+                    <div class="row">
+                        <div class="col">
+                            <h6 class="card-title">{{i.surgery_name}}</h6>
+                            <img class="align-left t1" src="assets/clock-history.svg" alt="">
+                            <h6 class="align-left t2 text-secondary">{{i.time}}, {{i.date}}</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body " style="padding-top: 0; padding-bottom: 0;">
+                    <img class="align-left" src="assets/drill.png" height="15px" width="15px" alt="">
+                    <h6 class="align-left text-secondary t2">{{i.item_count}} items ordered</h6>
+                    <img class="align-right" src="assets/person-add.svg" height="15px" width="15px" alt="">
+
+                    <img class="align-right" style="margin-top: -40px;" src="assets/activity.svg" height="15px"
+                        width="15px" alt="">
+                    <select class="btn t4 dropdown-toggle align-right " style="margin-bottom: 30px;">
+                        <option selected style="background-color: rgb(187, 187, 187);">{{i.status}}</option>
+                        <option value="accepted">Pending</option>
+                        <option value="accepted">Accepted</option>
+                    </select>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,226 @@
+<div class="row">
+
+  <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8 " style="margin-left: 520px;margin-top: -600px;">
+
+
+    <div class="card" style="width: 900px;">
+      <div class="card-body">
+        <div class="d-flex">
+          <h6
+            style="padding-top:10px;padding-left:20px;padding-bottom: 7px;font-size:15px;color: rgba(43, 43, 97, 0.932);display: inline;white-space: nowrap;">
+            Order List</h6>
+          <button type="button" class="btn btn-sm btn-warning text-light btnorder ">Export/Print</button>
+        </div>
+      </div>
+      <ul class="list-group list-group-flush">
+
+      </ul>
+      <div class="card-body">
+        <div class="accordion"
+          style="background-color: #ffffff; height: 250px; width: 900px; margin-left:-15px;margin-top:-30px;">
+
+          <!-- POWER TOOL SET TABLE -->
+
+          <div class="accordion-item">
+
+            <h2 class="accordion-header ">
+              <button style="height:50px;" class="accordion-button collapsed" (click)="powerToolClick()" type="button"
+                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseOne">
+                PowerTool Set (9)<img style="height: 30px;margin-left: 388px;" alt="">
+
+                <p class="align-right" style="display: inline-flex; margin-top: 20px;">Assign
+                  <img src="assets/Pt.PNG" style="width:10rem;padding-left: 5px;height:30px;" />
+                  <img src="assets/scan.png" alt="Icon" style="height:28; width: 30px; margin-left: 10px;">
+                </p>
+              </button>
+            </h2>
+
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+              <div class="accordion-body">
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Order Id</th>
+                      <th scope="col">Item Name</th>
+                      <th scope="col">Qty</th>
+                      <th scope="col">Size</th>
+                      <th scope="col">Serial No.</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody *ngFor="let i of powerTool">
+                    <tr>
+                      <td>#{{i.order_id}}</td>
+                      <td>{{i.item_name}}</td>
+                      <td>{{i.qty}}</td>
+                      <td>{{i.size}}</td>
+                      <td><button class="bs">{{i.serial_no}}</button><img src="assets/scan.png" alt="Icon"
+                          style="height:20; width: 20px; margin-left: 8px;opacity:50%;"></td>
+                      <td class="text-danger">{{i.status}}</td>
+                      <td> <img src="assets/pencil-square.svg" alt="Icon" class="icon-image"> <img src="assets/eye.svg"
+                         style="padding-left: 10px;" alt="Icon" class="icon-image"></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+          </div>
+
+
+          <!-- INSTRUMENT SET TABLE  -->
+
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+
+              <button style="height:50px;" class="accordion-button collapsed" (click)="instrumentClick()" type="button"
+                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo">
+                instruments Set (3)<img style="height: 30px;margin-left: 388px;" alt="">
+
+                <p class="align-right" style="display: inline-flex; margin-top: 20px;">Assign
+                  <img src="assets/IS.PNG" style="width:10rem;padding-left: 5px;height:30px;" />
+                  <img src="assets/scan.png" alt="Icon" style="height:28; width: 30px; margin-left: 5px;">
+                </p>
+              </button>
+
+            </h2>
+
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+              <div class="accordion-body">
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Order Id</th>
+                      <th scope="col">Item Name</th>
+                      <th scope="col">Qty</th>
+                      <th scope="col">Size</th>
+                      <th scope="col">Serial No.</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody *ngFor="let i of instrumentSet">
+                    <tr>
+                      <td>#{{i.order_id}}</td>
+                      <td>{{i.item_name}}</td>
+                      <td>{{i.qty}}</td>
+                      <td>{{i.size}}</td>
+                      <td><button class="bs">{{i.serial_no}}</button><img src="assets/scan.png" alt="Icon"
+                          style="height:20; width: 20px; margin-left: 8px;opacity:50%;"></td>
+                      <td class="text-danger">{{i.status}}</td>
+                      <td><img src="assets/pencil-square.svg" alt="Icon" class="icon-image"> <img src="assets/eye.svg"
+                        style="padding-left: 10px;" alt="Icon" class="icon-image"></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- SPECIALITY Attachments -->
+
+
+          <div class="accordion-item">
+
+            <h2 class="accordion-header ">
+              <button style="height:50px;" class="accordion-button collapsed" (click)="specialityClick()" type="button"
+                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree">
+                Speciality Attachments (4)<img style="height: 30px;margin-left: 388px;" alt="">
+                <img src="assets/scan.png" alt="Icon" style="height:28; width: 30px; margin-left: 160px;">
+              </button>
+
+            </h2>
+
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+              <div class="accordion-body">
+
+                <table class="table ">
+                  <thead>
+                    <tr>
+                      <th scope="col">Order Id</th>
+                      <th scope="col">Item Name</th>
+                      <th scope="col">Qty</th>
+                      <th scope="col">Size</th>
+                      <th scope="col">Serial No.</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody *ngFor="let i of speciality">
+                    <tr>
+                      <td>#{{i.order_id}}</td>
+                      <td>{{i.item_name}}</td>
+                      <td>{{i.qty}}</td>
+                      <td>{{i.size}}</td>
+                      <td><button class="bs">{{i.serial_no}}</button><img src="assets/scan.png" alt="Icon"
+                          style="height:20; width: 20px; margin-left: 8px;opacity:50%;"></td>
+                      <td class="text-danger">{{i.status}}</td>
+                      <td><img src="assets/pencil-square.svg" alt="Icon" class="icon-image"> <img src="assets/eye.svg"
+                        style="padding-left: 10px;"  alt="Icon" class="icon-image"></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- CONSUMABLES -->
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button style="height:50px;" class="accordion-button collapsed" (click)="consumablesClick()" type="button"
+                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFour">
+                Consumables (5)<img style="height: 30px;margin-left: 460px;" alt="">
+                <img src="assets/scan.png" alt="Icon" style="height:28; width: 30px; margin-left: 155px;">
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+              <div class="accordion-body">
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Order Id</th>
+                      <th scope="col">Item Name</th>
+                      <th scope="col">Qty</th>
+                      <th scope="col">Size</th>
+                      <th scope="col">Serial No.</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody *ngFor="let i of consumables">
+                    <tr>
+                      <td>#{{i.order_id}}</td>
+                      <td>{{i.item_name}}</td>
+                      <td>{{i.qty}}</td>
+                      <td>{{i.size}}</td>
+                      <td><button class="bs">{{i.serial_no}}</button><img src="assets/scan.png" alt="Icon"
+                          style="height:20; width: 20px; margin-left: 8px;opacity:50%;"></td>
+                      <td class="text-danger">{{i.status}}</td>
+                      <td><img src="assets/pencil-square.svg" alt="Icon" class="icon-image"> <img src="assets/eye.svg"
+                        style="padding-left: 10px;" alt="Icon" class="icon-image"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

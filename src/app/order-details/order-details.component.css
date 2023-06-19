@@ -1,0 +1,26 @@
+.bs {
+
+    border: 2px rgba(189, 184, 184, 0.596) solid;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.accordion-item .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: #000;
+    outline: none;
+    box-shadow: none;
+}
+/* .accordion-button::after {
+    margin-left:0!important;
+    margin-right:auto;
+  } */
+  :focus {
+    outline: 0 !important;
+    box-shadow: 0 0 0 0 rgb(0, 0, 0, 0) !important;
+}
+.btnorder{
+    height: 30px;
+    margin-top: 7px;
+    margin-left:700px;
+    
+}

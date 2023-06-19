@@ -1,0 +1,90 @@
+.card {
+
+    border: 1px solid #ccc;
+    border-radius: 0px;
+
+    position: absolute;
+    top: 22.7%;
+
+    transform: translate(-50%, -50%);
+    height: 230px;
+
+}
+
+.div1 {
+    margin-top: 47px;
+    width: 900px;
+}
+
+.img1 {
+
+    height: 31px;
+    width: 10px;
+
+}
+
+.b1 {
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: rgb(255, 237, 189);
+    font-size: smaller;
+    color: #848486;
+    display: inline;
+    white-space: nowrap;
+    
+}
+
+.b2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #848486;
+    margin-left: 0;
+    font-size: smaller;
+    color: #848486;
+}
+.d1 {
+    margin-left: 60px;
+    padding: 0;
+}
+
+.t1 {
+    margin-right: 10px;
+    height: 14px;
+    width: 15px;
+}
+
+.t2 {
+    font-size: small;
+}
+
+.t3 {
+    font-size: small;
+    margin-left: 1000px;
+}
+
+.img2 {
+    margin-right: 10px;
+    height: 42px;
+    width: 30px;
+}
+
+.navbar {
+    width: 940px;
+    margin-left: -14px;
+    background-color: #ffffff;
+    height: 20px;
+    
+
+}
+
+.nav-item {
+    margin-left: 70px;
+}
+
+.navbar-nav .nav-link.active {
+    color: rgb(236, 131, 10);
+    border-bottom: solid rgb(226, 131, 43);
+    margin-top:-7px;
+
+
+}

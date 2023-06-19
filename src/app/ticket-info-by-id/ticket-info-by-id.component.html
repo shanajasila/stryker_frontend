@@ -1,0 +1,89 @@
+<app-navbar></app-navbar>
+
+
+<div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8" style="margin-left: 945px;">
+    <div class="card" *ngFor="let i of data" style="margin-left: 35px; margin-top:16px;width: 963px;">
+
+
+        <div class="card-body " style="width: 900px;">
+            <div class="div1" style="display: flex;">
+                <img class="align-left img2" src="assets/arr.PNG" alt="">
+                <h6 class="card-title" style="font-size: x-large; margin-left: 10px; margin-top: -3px;width: 500px;">
+                    {{i.surgery_name}}</h6>
+                <button type="button" class="btn btn-sm btn-primary" style="width:80px;">New</button>
+                <button type="button" class="btn  b1">Ticket
+                    Id:{{i.ticket_id}}</button>
+                <button type="button" class="btn btn-sm btn-outline-primary b2" style="width:80px;">Order</button>
+
+                <div class="dropdown" style="padding-left:5px;">
+                    <button class="btn btn-light dropdown-toggle align-right" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <span class="priority-icon"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                [attr.fill]="priorityColor[i.priority]" class="bi bi-square-fill" viewBox="0 0 16 16">
+                                <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2z" />
+                            </svg></span>
+                        {{ i.priority }}
+                    </button>
+                    <ul class="dropdown-menu">
+
+                        <li><a class="dropdown-item">Very High</a></li>
+                        <li><a class="dropdown-item">High</a></li>
+                        <li><a class="dropdown-item">Normal</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div style="display: flex;margin-left:52px;margin-top: -5px;">
+                <img class="align-left t1" src="assets/clock-history.svg" alt="">
+                <h6 class="align-left t2 text-secondary">{{i.time}}, {{i.date}}</h6>
+            </div>
+
+            <div style="display: flex;margin-left:52px;margin-top: 0px;">
+                <img class="align-left t1" src="assets/people.svg" alt="">
+
+                <h6 class="align-left t2 text-secondary">{{i.doctor_name}}</h6>
+            </div>
+
+            <div style="display: flex;margin-left:52px;margin-top: 0px;">
+                <img class="align-left t1" src="assets/hospital.svg" alt="">
+                <h6 class="align-left t2 text-secondary" style=" display: inline;white-space: nowrap;">
+                    {{i.hospital_name}}</h6>
+
+                <img class="align-right" src="assets/activity.svg" height="15px" width="15px" alt=""
+                    style="margin-left: 500px;margin-top:10px;">
+                <select class="btn t2 dropdown-toggle text-secondary" style="margin-top: -10px; margin-left: -10px; ">
+                    <option selected style="background-color: rgb(187, 187, 187);">{{i.status}}</option>
+                    <option value="option2">Pending</option>
+                    <option value="option3">Option 3</option>
+                </select>
+
+
+                <img class="align-right" src="assets/person-add.svg" height="18px" width="18px" alt=""
+                    style="margin-left: 15px;margin-top:10px;">
+                <p class="align-left text-secondary t2"
+                    style="margin-top: 10px;font-weight:smaller; margin-left: 5px; display: inline;white-space: nowrap;">
+                    {{i.assigned_agent}}</p>
+
+            </div>
+
+            <div>
+                <nav class="navbar navbar-expand navbar-light ">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link active" routerLink="/viewById">Order Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/viewById">Hospital details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLink="/viewById">Order tracking</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+</div>
+<app-order-details></app-order-details>
